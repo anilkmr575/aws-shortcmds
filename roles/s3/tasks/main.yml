@@ -1,0 +1,15 @@
+---
+
+# Assume an existing role (more details: http://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html)
+#sts_assume_role:
+#  role_arn: "arn:aws:iam::123456789012:role/someRole"
+#  role_session_name: "someRoleSession"
+#register: assumed_role
+
+- s3_bucket:
+    name: "{{ myBucketName }}"
+    region: "{{ myRegion }}"
+    state: present
+    versioning: yes
+    tags:
+example: tag1
