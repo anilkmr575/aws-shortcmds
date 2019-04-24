@@ -1,0 +1,8 @@
+---
+- name: creating s3 Bucket 
+  hosts: localhost
+  gather_facts: false
+  vars_files:
+     - group_vars/s3/s3_create
+  roles:
+    - {role: s3}
