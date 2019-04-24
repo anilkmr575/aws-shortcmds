@@ -11,5 +11,3 @@
     region: "{{ myRegion }}"
     state: present
     versioning: yes
-    tags:
-example: tag1
