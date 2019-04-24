@@ -2,7 +2,7 @@ def appname = 'My Jenkins Build: '
 def jenkinsUrl = "${env.JENKINS_URL}"
 def JOB_NAME = "${env.JOB_NAME}"
 def BUILD_ID = "${env.BUILD_ID}"
-def mailNotifier = 'jenkins@' + jenkinsUrl.replace('https://', '').replace('.com/','com')
+def mailNotifier = 'jenkins@' + jenkinsUrl.replace('http://', '').replace('.com/','com')
 String cron_string = "H/30 * * * *"
 
                                                                            
@@ -26,7 +26,7 @@ pipeline {
             from: "${mailNotifier}",
             replyTo: 'donotreply@gmail.com',
             subject: "${appname} ${JOB_NAME}",
-            to: 'chandra.prakash363@gmail.com')
+            to: 'anilk@ncmrwf.gov.in')
 
    }
  }
